@@ -16,6 +16,18 @@ public class Tester{
     B.add("3");
     B.add(1, "2");
     System.out.println(B);
-    B.add(1, null);
+    try{
+      B.add(1, null);
+    }
+    catch(IllegalArgumentException e){
+      System.out.println("Worked");
+    }
+
+    OrderedArrayList<Integer> C = new OrderedArrayList<Integer>();
+    C.add(3);
+    C.add(1);
+    C.add(2);
+    C.add(10);
+    System.out.println(C);
   }
 }
