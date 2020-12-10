@@ -50,5 +50,21 @@ public class Tester{
       System.out.println("Worked");
     }
 
+    OrderedArrayList<Integer> E = new OrderedArrayList<Integer>();
+    E.add(1);
+    E.add(1);
+    E.add(2);
+    E.add(3);
+    E.add(4);
+    E.add(5);
+    System.out.println(E.set(2, 6));
+    System.out.println(E);
+    try{
+      E.add(0, null);
+    }
+    catch(IllegalArgumentException e){
+      System.out.println("Worked");
+    }
+
   }
 }

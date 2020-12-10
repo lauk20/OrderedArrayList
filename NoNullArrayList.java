@@ -10,13 +10,11 @@ public class NoNullArrayList<T> extends ArrayList<T>{
   }
 
   public boolean add(T t){
-    if (t != null){
-      super.add(t);
-      return true;
-    }
-    else{
+    if (t == null){
       throw new IllegalArgumentException("null is not a valid item to add to the list");
     }
+    super.add(t);
+    return true;
   }
 
   public void add(int index, T element){
@@ -27,5 +25,6 @@ public class NoNullArrayList<T> extends ArrayList<T>{
       throw new IllegalArgumentException("null is not a valid item to add to the list");
     }
   }
+
 
 }
