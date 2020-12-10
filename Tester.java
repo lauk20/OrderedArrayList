@@ -66,5 +66,17 @@ public class Tester{
       System.out.println("Worked");
     }
 
+    OrderedArrayList<String> A1 = new OrderedArrayList<String>(0);
+    A1.add("A");
+    A1.add("C");
+    A1.add("B");
+    System.out.println(A1);
+
+
+    OrderedArrayList<Integer> B1 = new OrderedArrayList<Integer>();
+    B1.add(1);
+    B1.add(5);
+    B1.add(2);
+    System.out.println(B1);
   }
 }
