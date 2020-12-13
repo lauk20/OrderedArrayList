@@ -31,9 +31,11 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
 
   public T set(int index, T element){
-    T old = get(index);
-    remove(index);
-    add(element);
+    if (element == null){
+      throw new IllegalArgumentException("null is not a valid item to add to the list");
+    }
+    T old = remove(index);
+    add(index, element);
 
     return old;
   }

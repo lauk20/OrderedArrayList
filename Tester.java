@@ -78,5 +78,11 @@ public class Tester{
     B1.add(5);
     B1.add(2);
     System.out.println(B1);
+
+    OrderedArrayList<Integer> C1 = new OrderedArrayList<Integer>();
+    C1.add(-1);
+    C1.add(-5);
+    C1.set(0, 2);
+    System.out.println(C1);
   }
 }
